@@ -98,12 +98,27 @@ video {
   }
 }
 .navbar nav a {
+  position: relative;
   text-decoration: none;
   color: var(--ink-soft);
   margin-left: 1.6rem;
+  transition: color 0.25s ease;
 }
 .navbar nav a:hover {
   color: var(--lacquer);
+}
+.navbar nav a.active {
+  color: var(--lacquer);
+}
+.navbar nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background: var(--lacquer);
+  border-radius: 2px;
 }
 
 /* ---------- HERO ---------- */
@@ -316,46 +331,4 @@ code {
   margin-top: 3rem;
   font-size: 1.25rem;
   color: var(--lacquer);
-}
-
-/* ---------- SHARE / QR ---------- */
-.share .qr-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.9rem;
-  padding: 1.8rem;
-  background: var(--paper-dim);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-}
-.qr-card canvas {
-  width: 200px;
-  height: 200px;
-  border-radius: 6px;
-  background: var(--paper);
-}
-.qr-url {
-  margin: 0;
-  font-family: Consolas, "Courier New", monospace;
-  font-size: 0.78rem;
-  color: var(--ink-soft);
-  word-break: break-all;
-  text-align: center;
-}
-.qr-hint {
-  margin: 0;
-  font-size: 0.88rem;
-  color: var(--ink-soft);
-  text-align: center;
-  max-width: 34ch;
-}
-
-/* ---------- FOOTER ---------- */
-footer {
-  border-top: 1px solid var(--line);
-  padding: 3rem 2rem 4rem;
-  text-align: center;
-  color: var(--ink-soft);
-  font-size: 0.88rem;
 }

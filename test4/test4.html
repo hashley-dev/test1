@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      C. Mác và Ph. Ăngghen — Hai Nhà Tư Tưởng Và Tuyên Ngôn Của Đảng Cộng Sản
+    </title>
+
+    <!-- ================= GOOGLE FONTS ================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ================= CSS ================= -->
+    <link rel="stylesheet" href="macangghen.css" />
+  </head>
+  <body>
+    <!-- ============================================================
+     MÀN HÌNH LOADING (hiện khi trang vừa mở, JS sẽ ẩn đi)
+============================================================ -->
+    <div id="loading-screen">
+      <div class="loading-emblem">M·Ă</div>
+      <div class="loading-bar"><span></span></div>
+      <p class="loading-text">Đang mở cánh cửa lịch sử...</p>
+    </div>
+
+    <!-- ============================================================
+     HEADER + NAVIGATION
+============================================================ -->
+    <header id="header">
+      <nav class="navbar">
+        <!-- Logo trường (gắn ở góc trên bên trái, có thể bấm) -->
+        <a
+          href="#hero"
+          class="logo-mark"
+          aria-label="Đại học Tôn Đức Thắng — về đầu trang"
+        >
+          <img
+            src="https://tdtu.edu.vn/sites/www/files/logo_2.png"
+            alt="Logo Đại học Tôn Đức Thắng (TDT)"
+            loading="eager"
+            decoding="async"
+          />
+        </a>
+
+        <a href="#hero" class="logo">Mác <span>&amp; Ăngghen</span></a>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#gioi-thieu" class="nav-link">Giới thiệu</a></li>
+          <li><a href="#anh-hung" class="nav-link">Nhân vật</a></li>
+          <li><a href="#timeline" class="nav-link">Cuộc đời</a></li>
+          <li><a href="#hoc-thuyet" class="nav-link">Học thuyết</a></li>
+          <li><a href="#tac-pham" class="nav-link">Tác phẩm</a></li>
+          <li><a href="#thu-vien" class="nav-link">Thư viện</a></li>
+          <li><a href="#video" class="nav-link">Thước phim</a></li>
+          <li><a href="#di-san" class="nav-link">Di sản</a></li>
+        </ul>
+
+        <!-- Nút hamburger cho mobile -->
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Mở menu"
+          aria-expanded="false"
+          aria-controls="nav-links"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ============================================================
+       SECTION 1 — HERO
+  ============================================================ -->
+      <section id="hero" class="hero">
+        <!-- Ảnh nền hero: JS gắn ảnh SVG tự tạo; muốn dùng ảnh thật, sửa trong macangghen.js -->
+        <div class="hero-bg"></div>
+        <canvas id="particles-canvas" aria-hidden="true"></canvas>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+          <p class="hero-eyebrow">
+            C. Mác 1818 – 1883 · Ph. Ăngghen 1820 – 1895
+          </p>
+          <h1 class="hero-title reveal-text">MÁC &amp; ĂNGGHEN</h1>
+          <p class="hero-subtitle">
+            Hai nhà tư tưởng đặt nền móng cho chủ nghĩa Mác và cùng soạn thảo
+            Tuyên ngôn của Đảng Cộng sản
+          </p>
+          <div class="hero-buttons">
+            <a href="#timeline" class="btn btn-primary">Khám phá cuộc đời</a>
+            <a href="#hoc-thuyet" class="btn btn-outline">Xem học thuyết</a>
+          </div>
+        </div>
+
+        <a href="#gioi-thieu" class="scroll-down" aria-label="Cuộn xuống">
+          <span></span>
+        </a>
+      </section>
+
+      <!-- ============================================================
+       SECTION 2 — GIỚI THIỆU
+  ============================================================ -->
+      <section id="gioi-thieu" class="section intro-section">
+        <div class="container intro-grid">
+          <div class="intro-text reveal-on-scroll">
+            <p class="section-label">Giới thiệu</p>
+            <h2 class="section-title">
+              C. Mác Và Ph. Ăngghen — Tình Bạn Và Sự Nghiệp Chung
+            </h2>
+
+            <p>
+              Karl Marx (C. Mác, 1818 – 1883) và Friedrich Engels (Ph. Ăngghen,
+              1820 – 1895) là hai nhà tư tưởng, nhà cách mạng người Đức, những
+              người sáng lập chủ nghĩa Mác. Cả hai lớn lên ở vùng Sông Ranh của
+              Vương quốc Phổ, nhưng đi vào lịch sử tư tưởng bằng những con đường
+              rất khác nhau: Mác là nhà nghiên cứu triết học và kinh tế, còn
+              Ăngghen là con trai một chủ xưởng dệt, sớm được đưa vào làm việc
+              trong công nghiệp.
+            </p>
+
+            <p>
+              Cuối tháng 8 năm 1844, Ăngghen ghé Paris và gặp Mác. Hai người trò
+              chuyện suốt mười ngày, nhận thấy quan điểm của mình về triết học,
+              kinh tế và cách mạng rất gần nhau. Từ đó, họ bắt đầu một sự cộng
+              tác kéo dài đến khi Mác qua đời năm 1883, với hàng nghìn bức thư
+              trao đổi ý kiến và nhiều tác phẩm viết chung.
+            </p>
+
+            <p>
+              Sự phân công của hai ông khá tự nhiên. Mác dành phần lớn thời gian
+              cho nghiên cứu lý luận, đặc biệt là kinh tế chính trị. Ăngghen
+              mang đến kinh nghiệm thực tế về đời sống công nhân và nhà máy ở
+              Manchester, đồng thời từ năm 1850 làm việc trong công ty gia đình
+              để có tiền giúp Mác và gia đình ông đang sống túng thiếu ở Luân
+              Đôn.
+            </p>
+
+            <p>
+              Những công trình chung và riêng của hai ông đã đặt nền móng cho
+              một hệ thống lý luận gồm triết học, kinh tế chính trị và học
+              thuyết về chủ nghĩa xã hội. Nổi bật là Tuyên ngôn của Đảng Cộng
+              sản (1848), việc sáng lập Quốc tế thứ nhất (1864) và bộ Tư bản,
+              tập I của Mác (1867).
+            </p>
+
+            <p>
+              Sau khi Mác mất, Ăngghen tiếp tục sự nghiệp chung: ông biên tập
+              các bản thảo còn lại để xuất bản tập II (1885) và tập III (1894)
+              của bộ Tư bản, viết nhiều tác phẩm quan trọng và làm cố vấn cho
+              phong trào công nhân quốc tế cho đến khi qua đời năm 1895.
+            </p>
+
+            <p>
+              Trang web này tập hợp thông tin, hình ảnh và video về thân thế, sự
+              nghiệp, học thuyết, các tác phẩm và di sản của C. Mác và Ph.
+              Ăngghen — như một phòng tư liệu nhỏ giúp người xem hiểu thêm về
+              hai nhà tư tưởng có ảnh hưởng lớn nhất đến tư tưởng và chính trị
+              hiện đại.
+            </p>
+          </div>
+
+          <div class="intro-image reveal-on-scroll">
+            <!-- THAY ẢNH TẠI ĐÂY: chép ảnh vào thư mục images/ với tên mac-angghen.jpg
+                 (ví dụ ảnh tượng đài Mác – Ăngghen ở Berlin trên Wikimedia Commons, kiểm tra giấy phép).
+                 Nếu thiếu file, JS sẽ tự thay bằng ảnh SVG dự phòng. -->
+            <figure class="intro-figure">
+              <img
+                id="intro-portrait"
+                src="images/mac-angghen.jpg"
+                alt="Tượng đài C. Mác và Ph. Ăngghen"
+                loading="lazy"
+              />
+              <figcaption class="intro-caption">
+                Tượng đài C. Mác và Ph. Ăngghen
+              </figcaption>
+            </figure>
+            <div class="intro-stats">
+              <div class="stat-item">
+                <span class="stat-number" data-target="1848">0</span>
+                <p>Tuyên ngôn của Đảng Cộng sản ra đời</p>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-target="1867">0</span>
+                <p>Tư bản, tập I xuất bản</p>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-target="39">0</span>
+                <p>năm cộng tác (1844 – 1883)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+       SECTION 3 — NHÂN VẬT
+  ============================================================ -->
+      <section id="anh-hung" class="section heroes-section">
+        <div class="container">
+          <p class="section-label center">Nhân vật lịch sử</p>
+          <h2 class="section-title center">
+            Mác, Ăngghen Và Những Người Đồng Hành
+          </h2>
+          <p class="section-desc center">
+            Nhấn "Xem tiểu sử" để đọc chi tiết về thân thế, bối cảnh lịch sử,
+            đóng góp và ý nghĩa của từng nhân vật — bắt đầu từ hai nhà sáng lập.
+          </p>
+
+          <div class="heroes-grid" id="heroes-grid">
+            <!-- Các thẻ nhân vật được JavaScript tạo tự động từ heroesData -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal hiển thị tiểu sử chi tiết nhân vật -->
+      <div
+        class="modal-overlay"
+        id="hero-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Tiểu sử nhân vật"
+      >
+        <div class="modal-box">
+          <button class="modal-close" id="modal-close" aria-label="Đóng">
+            &times;
+          </button>
+          <div class="modal-content" id="modal-content">
+            <!-- Nội dung chi tiết được JS đổ vào đây -->
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+       SECTION 4 — TIMELINE
+  ============================================================ -->
+      <section id="timeline" class="section timeline-section">
+        <div class="container">
+          <p class="section-label center">Dòng chảy thời gian</p>
+          <h2 class="section-title center">
+            Hành Trình Của Hai Nhà Tư Tưởng Qua Các Mốc Thời Gian
+          </h2>
+          <p class="section-desc center">
+            Nhấn vào từng mốc để xem chi tiết bối cảnh và ý nghĩa lịch sử.
+          </p>
+        </div>
+
+        <div class="timeline-wrap" id="timeline-wrap">
+          <!-- Các mốc thời gian được tạo tự động bởi JS -->
+        </div>
+      </section>
+
+      <!-- ============================================================
+       SECTION 5 — BA NGUỒN GỐC, BA BỘ PHẬN CẤU THÀNH
+  ============================================================ -->
+      <section id="hoc-thuyet" class="section conv-section">
+        <div class="container">
+          <p class="section-label center">Học thuyết</p>
+          <h2 class="section-title center">
+            Ba Nguồn Gốc, Ba Bộ Phận Cấu Thành Của Chủ Nghĩa Mác
+          </h2>
+          <p class="section-desc center">
+            Cách khái quát mà V.I. Lênin đưa ra năm 1913: chủ nghĩa Mác kế thừa
+            ba dòng tư tưởng lớn của thế kỷ XVIII – XIX và hợp thành một hệ
+            thống gồm ba bộ phận.
+          </p>
+
+          <div class="conv-grid" id="conv-grid">
+            <!-- Ba nguồn gốc, lõi và ba bộ phận được tạo tự động bởi JS (convData) -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+       SECTION 6 — TÁC PHẨM / SỰ KIỆN
+  ============================================================ -->
+      <section id="tac-pham" class="section events-section">
+        <div class="container">
+          <p class="section-label center">Tư liệu lịch sử</p>
+          <h2 class="section-title center">
+            Những Tác Phẩm Và Sự Kiện Then Chốt
+          </h2>
+          <p class="section-desc center">
+            Từ cuộc gặp ở Paris năm 1844 đến Tuyên ngôn, Quốc tế thứ nhất, bộ Tư
+            bản và Công xã Paris: những mốc gắn với tên tuổi hai ông.
+          </p>
+
+          <div class="events-list" id="events-list">
+            <!-- Danh sách sự kiện được tạo tự động bởi JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+       SECTION 7 — THƯ VIỆN HÌNH ẢNH
+  ============================================================ -->
+      <section id="thu-vien" class="section gallery-section">
+        <div class="container">
+          <p class="section-label center">Thư viện</p>
+          <h2 class="section-title center">Thư Viện Hình Ảnh</h2>
+          <p class="section-desc center">
+            Tư liệu hình ảnh về C. Mác, Ph. Ăngghen, những địa danh gắn với hai
+            ông và các bản in tác phẩm. Nhấn vào ảnh để xem ở chế độ toàn màn
+            hình.
+          </p>
+        </div>
+
+        <div class="gallery-grid" id="gallery-grid">
+          <!-- Ảnh thư viện được tạo tự động bởi JS, xem mảng galleryData -->
+        </div>
+      </section>
+
+      <!-- Lightbox xem ảnh phóng to -->
+      <div
+        class="lightbox"
+        id="lightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Xem ảnh phóng to"
+      >
+        <button
+          class="lightbox-close"
+          id="lightbox-close"
+          aria-label="Đóng ảnh"
+        >
+          &times;
+        </button>
+        <button
+          class="lightbox-nav lightbox-prev"
+          id="lightbox-prev"
+          aria-label="Ảnh trước"
+        >
+          &#10094;
+        </button>
+        <img src="" alt="" id="lightbox-img" />
+        <p class="lightbox-caption" id="lightbox-caption"></p>
+        <button
+          class="lightbox-nav lightbox-next"
+          id="lightbox-next"
+          aria-label="Ảnh sau"
+        >
+          &#10095;
+        </button>
+      </div>
+
+      <!-- ============================================================
+       SECTION 8 — VIDEO
+  ============================================================ -->
+      <section id="video" class="section video-section">
+        <div class="container">
+          <p class="section-label center">Tư liệu phim</p>
+          <h2 class="section-title center">
+            C. Mác Và Ph. Ăngghen Qua Những Thước Phim
+          </h2>
+          <p class="section-desc center">
+            Những thước phim tài liệu giúp hình dung rõ nét hơn về cuộc đời và
+            sự nghiệp của hai nhà tư tưởng.
+          </p>
+
+          <div class="video-grid">
+            <!--
+              CÁCH GẮN VIDEO CỤ THỂ:
+              Thay thẻ <a class="video-frame video-link" ...> bằng iframe dưới đây
+              và điền VIDEO_ID thật (phần sau "watch?v=" trên YouTube):
+
+              <div class="video-frame">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID"
+                        title="..." allowfullscreen></iframe>
+              </div>
+            -->
+            <article class="video-card">
+              <a
+                class="video-frame video-link"
+                href="https://www.youtube.com/results?search_query=Tuy%C3%AAn+ng%C3%B4n+c%E1%BB%A7a+%C4%90%E1%BA%A3ng+C%E1%BB%99ng+s%E1%BA%A3n+M%C3%A1c+%C4%82ngghen"
+                target="_blank"
+                rel="noopener"
+                data-art-title="Tuyên ngôn|Đảng Cộng sản"
+                data-art-sub="London, 1848"
+                data-art-hue="red"
+              >
+                <span class="video-play" aria-hidden="true">&#9658;</span>
+                <span class="video-link-label"
+                  >Mở danh sách video trên YouTube</span
+                >
+              </a>
+              <div class="video-info">
+                <h3>Tuyên ngôn của Đảng Cộng sản (1848)</h3>
+                <p>
+                  Tư liệu về bối cảnh ra đời, nội dung và ảnh hưởng của tác phẩm
+                  do Mác và Ăngghen soạn thảo.
+                </p>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <a
+                class="video-frame video-link"
+                href="https://www.youtube.com/results?search_query=Cu%E1%BB%99c+%C4%91%E1%BB%9Di+C%C3%A1c+M%C3%A1c+phim+t%C3%A0i+li%E1%BB%87u"
+                target="_blank"
+                rel="noopener"
+                data-art-title="Cuộc đời|C. Mác"
+                data-art-sub="1818 – 1883"
+                data-art-hue="gold"
+              >
+                <span class="video-play" aria-hidden="true">&#9658;</span>
+                <span class="video-link-label"
+                  >Mở danh sách video trên YouTube</span
+                >
+              </a>
+              <div class="video-info">
+                <h3>Cuộc đời và sự nghiệp của C. Mác</h3>
+                <p>
+                  Phim tài liệu về hành trình từ Trier đến London và quá trình
+                  hình thành bộ Tư bản.
+                </p>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <a
+                class="video-frame video-link"
+                href="https://www.youtube.com/results?search_query=%C4%82ngghen+ti%E1%BB%83u+s%E1%BB%AD+phim+t%C3%A0i+li%E1%BB%87u"
+                target="_blank"
+                rel="noopener"
+                data-art-title="Ph. Ăngghen"
+                data-art-sub="1820 – 1895"
+                data-art-hue="jade"
+              >
+                <span class="video-play" aria-hidden="true">&#9658;</span>
+                <span class="video-link-label"
+                  >Mở danh sách video trên YouTube</span
+                >
+              </a>
+              <div class="video-info">
+                <h3>Ph. Ăngghen — người bạn và cộng sự</h3>
+                <p>
+                  Tư liệu về cuộc đời Ăngghen, từ xưởng dệt ở Manchester đến vai
+                  trò trong phong trào công nhân quốc tế.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+       SECTION 9 — Ý NGHĨA / DI SẢN
+  ============================================================ -->
+      <section id="di-san" class="section legacy-section">
+        <div class="container">
+          <p class="section-label center">Ý nghĩa lịch sử</p>
+          <h2 class="section-title center">Mác Và Ăngghen Để Lại Điều Gì?</h2>
+
+          <div class="legacy-grid">
+            <div class="legacy-text reveal-on-scroll">
+              <p>
+                Đóng góp cốt lõi của Mác và Ăngghen là quan niệm duy vật về lịch
+                sử. Theo quan niệm này, sản xuất vật chất và những quan hệ xã
+                hội hình thành trên cơ sở đó là nền tảng của đời sống xã hội;
+                trong các xã hội có giai cấp, đấu tranh giai cấp là một động lực
+                quan trọng của sự phát triển lịch sử. Đây là điểm xuất phát để
+                hai ông phân tích chủ nghĩa tư bản trong bộ Tư bản.
+              </p>
+
+              <p>
+                Về phương pháp, hai ông tiếp thu phép biện chứng của Hêghen
+                nhưng đặt nó trên nền tảng duy vật: xem xét sự vật trong vận
+                động, trong mối liên hệ và trong mâu thuẫn của chúng. Đồng thời,
+                hai ông nhấn mạnh gắn lý luận với thực tiễn — tinh thần được cô
+                đọng trong luận cương thứ 11 về Phoiơbắc: vấn đề không chỉ là
+                giải thích mà còn là cải tạo thế giới.
+              </p>
+
+              <p>
+                Về chính trị, Tuyên ngôn của Đảng Cộng sản, Quốc tế thứ nhất và
+                sự tổng kết kinh nghiệm Công xã Paris đã ảnh hưởng mạnh đến
+                phong trào công nhân châu Âu. Sau năm 1883, Ăngghen tiếp tục
+                giúp đỡ các đảng công nhân, và Quốc tế thứ hai được thành lập
+                năm 1889. Đầu thế kỷ XX, V.I. Lênin vận dụng và phát triển học
+                thuyết trong điều kiện mới; Cách mạng Tháng Mười Nga năm 1917
+                trở thành một bước ngoặt lớn của lịch sử thế giới.
+              </p>
+
+              <p>
+                Ở Việt Nam, năm 1920, Nguyễn Ái Quốc đọc bản Sơ thảo lần thứ
+                nhất những luận cương về vấn đề dân tộc và vấn đề thuộc địa của
+                Lênin và tìm thấy con đường cứu nước. Đảng Cộng sản Việt Nam
+                thành lập năm 1930 và hiện lấy chủ nghĩa Mác – Lênin cùng tư
+                tưởng Hồ Chí Minh làm nền tảng tư tưởng. Ngày nay, các môn Triết
+                học Mác – Lênin, Kinh tế chính trị Mác – Lênin và Chủ nghĩa xã
+                hội khoa học là học phần bắt buộc trong chương trình đại học.
+              </p>
+
+              <p>
+                Bên cạnh những đánh giá cao, học thuyết của Mác và Ăngghen cũng
+                là đối tượng của nhiều tranh luận học thuật và chính trị. Có
+                người nhấn mạnh giá trị phân tích của bộ Tư bản đối với chủ
+                nghĩa tư bản hiện đại; có người phê phán các dự báo của hai ông
+                cũng như thực tiễn xây dựng xã hội nhân danh học thuyết. Đọc
+                trực tiếp tác phẩm gốc và đặt chúng trong bối cảnh thế kỷ XIX là
+                cách tốt nhất để hiểu những gì hai ông thực sự viết.
+              </p>
+
+              <p>
+                Mác mất ngày 14/3/1883 và được an táng ở nghĩa trang Highgate,
+                London, bên cạnh phu nhân Jenny. Ăngghen mất ngày 5/8/1895; theo
+                nguyện vọng của ông, tro được rải xuống biển. Hai ông để lại một
+                di sản tư tưởng đồ sộ, tiếp tục được nghiên cứu, giảng dạy và
+                tranh luận cho đến ngày nay.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+       SECTION 10 — TRÍCH DẪN LỊCH SỬ
+  ============================================================ -->
+      <section class="quote-section" id="quote-section">
+        <div class="quote-bg"></div>
+        <div class="quote-overlay"></div>
+
+        <div class="quote-content" id="quote-content">
+          <!-- Nội dung trích dẫn được luân phiên hiển thị bởi JS, dữ liệu trong quotesData -->
+        </div>
+      </section>
+
+      <!-- ============================================================
+       BACK TO TOP
+  ============================================================ -->
+      <button id="back-to-top" aria-label="Lên đầu trang">&uarr;</button>
+    </main>
+
+    <!-- ============================================================
+     FOOTER
+============================================================ -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-about">
+          <h3 class="footer-logo">Mác <span>&amp; Ăngghen</span></h3>
+          <p>
+            Không gian tư liệu số giới thiệu về C. Mác và Ph. Ăngghen — thân
+            thế, sự nghiệp, học thuyết, các tác phẩm và di sản hai ông để lại
+            cho lịch sử tư tưởng thế giới.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="#hero">Trang chủ</a></li>
+            <li><a href="#gioi-thieu">Giới thiệu</a></li>
+            <li><a href="#anh-hung">Nhân vật lịch sử</a></li>
+            <li><a href="#timeline">Hành trình của hai ông</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Nội dung</h4>
+          <ul>
+            <li><a href="#hoc-thuyet">Ba nguồn gốc, ba bộ phận</a></li>
+            <li><a href="#tac-pham">Tác phẩm và sự kiện</a></li>
+            <li><a href="#thu-vien">Thư viện hình ảnh</a></li>
+            <li><a href="#video">Thước phim tài liệu</a></li>
+            <li><a href="#di-san">Di sản Mác – Ăngghen</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="current-year"></span> C. Mác và Ph. Ăngghen — Tư liệu
+          lịch sử. Trang web được xây dựng với mục đích giáo dục và học tập.
+        </p>
+        <p class="footer-quote">"Vô sản tất cả các nước, đoàn kết lại!"</p>
+      </div>
+    </footer>
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script src="macangghen.js" defer></script>
+  </body>
+</html>

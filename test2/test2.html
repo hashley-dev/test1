@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lý Thường Kiệt – Danh Tướng Và Bài Thơ Thần Nam Quốc Sơn Hà</title>
+
+    <!-- ================= GOOGLE FONTS ================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ================= CSS ================= -->
+    <link rel="stylesheet" href="test2.css" />
+  </head>
+  <body>
+    <!-- ============================================================
+     MÀN HÌNH LOADING (hiện khi trang vừa mở, script.js sẽ ẩn đi)
+============================================================ -->
+    <div id="loading-screen">
+      <div class="loading-emblem">LTK</div>
+      <div class="loading-bar"><span></span></div>
+      <p class="loading-text">Đang mở cánh cửa lịch sử...</p>
+    </div>
+
+    <!-- ============================================================
+     HEADER + NAVIGATION
+============================================================ -->
+    <header id="header">
+      <nav class="navbar">
+        <!-- Logo trường (gắn ở góc trên bên trái, có thể bấm) -->
+        <a
+          href="#hero"
+          class="logo-mark"
+          aria-label="Đại học Tôn Đức Thắng — về đầu trang"
+        >
+          <img
+            src="https://tdtu.edu.vn/sites/www/files/logo_2.png"
+            alt="Logo Đại học Tôn Đức Thắng (TDT)"
+            loading="eager"
+            decoding="async"
+          />
+        </a>
+
+        <a href="#hero" class="logo">Lý Thường <span>Kiệt</span></a>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#gioi-thieu" class="nav-link">Giới thiệu</a></li>
+          <li><a href="#anh-hung" class="nav-link">Nhân vật</a></li>
+          <li><a href="#timeline" class="nav-link">Cuộc đời</a></li>
+          <li><a href="#su-kien" class="nav-link">Trận chiến</a></li>
+          <li><a href="#thu-vien" class="nav-link">Thư viện</a></li>
+          <li><a href="#video" class="nav-link">Thước phim</a></li>
+          <li><a href="#di-san" class="nav-link">Di sản</a></li>
+        </ul>
+
+        <!-- Nút hamburger cho mobile -->
+        <button class="hamburger" id="hamburger" aria-label="Mở menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ============================================================
+       SECTION 1 — HERO
+  ============================================================ -->
+      <section id="hero" class="hero">
+        <!-- THAY ẢNH TẠI ĐÂY: ảnh nền hero -->
+        <div class="hero-bg"></div>
+        <canvas id="particles-canvas"></canvas>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+          <p class="hero-eyebrow">Danh tướng thời Lý · 1019 – 1105</p>
+          <h1 class="hero-title reveal-text">LÝ THƯỜNG KIỆT</h1>
+          <p class="hero-subtitle">
+            Người viết nên phòng tuyến Như Nguyệt và bài thơ thần Nam Quốc Sơn
+            Hà
+          </p>
+          <div class="hero-buttons">
+            <a href="#timeline" class="btn btn-primary">Khám phá cuộc đời</a>
+            <a href="#anh-hung" class="btn btn-outline">Xem nhân vật</a>
+          </div>
+        </div>
+
+        <a href="#gioi-thieu" class="scroll-down" aria-label="Cuộn xuống">
+          <span></span>
+        </a>
+      </section>
+
+      <!-- ============================================================
+       SECTION 2 — GIỚI THIỆU
+  ============================================================ -->
+      <section id="gioi-thieu" class="section intro-section">
+        <div class="container intro-grid">
+          <div class="intro-text reveal-on-scroll">
+            <p class="section-label">Giới thiệu</p>
+            <h2 class="section-title">
+              Lý Thường Kiệt — Danh Tướng Của Nhà Lý
+            </h2>
+
+            <p>
+              Lý Thường Kiệt (1019 – 1105) tên thật là Ngô Tuấn, tự Thường Kiệt,
+              quê ở phường Thái Hòa, thành Thăng Long (nay thuộc Hà Nội). Ông
+              xuất thân trong một gia đình có truyền thống võ nghiệp, được vua
+              Lý Thái Tông cho theo hầu từ khi còn trẻ và nhanh chóng nổi tiếng
+              nhờ sự thông minh, gan dạ cùng tài năng quân sự hiếm có.
+            </p>
+
+            <p>
+              Trải qua ba đời vua Lý Thái Tông, Lý Thánh Tông và Lý Nhân Tông,
+              ông giữ nhiều trọng trách từ Thái úy, Đại úy đến Đại tướng quân —
+              trở thành trụ cột của triều đình và là người tổ chức lực lượng
+              quân đội Đại Việt theo hướng tinh nhuệ, kỷ luật và chủ động.
+            </p>
+
+            <p>
+              Tên tuổi của ông gắn chặt với cuộc kháng chiến chống Tống (1075 –
+              1077): chủ động đánh sang đất Tống để phá thế chuẩn bị của địch,
+              sau đó lập phòng tuyến kiên cố trên sông Như Nguyệt và đánh tan
+              đại quân nhà Tống, buộc đối phương phải giảng hòa rút quân.
+            </p>
+
+            <p>
+              Cũng tại phòng tuyến ấy, bài thơ thần "Nam quốc sơn hà" — bản
+              tuyên ngôn chủ quyền sớm nhất còn lưu truyền của dân tộc — được
+              cho là đã vang lên giữa đêm để khích lệ tinh thần binh sĩ, khẳng
+              định nước Nam có vua riêng, có phần định riêng tại "sách trời".
+            </p>
+
+            <p>
+              Bên cạnh vai trò quân sự, Lý Thường Kiệt còn là nhà chính trị, nhà
+              ngoại giao khéo léo. Chiến thắng của ông đi kèm một hành xử đáng
+              chú ý: chủ động đề nghị giảng hòa để "không làm tổn thương lòng tự
+              trọng" của nhà Tống, qua đó giữ được hòa hiếu lâu dài giữa hai
+              nước.
+            </p>
+
+            <p>
+              Trang web này tập hợp thông tin, hình ảnh và video về thân thế, sự
+              nghiệp, các trận đánh và di sản mà Lý Thường Kiệt để lại cho lịch
+              sử Việt Nam — như một phòng tư liệu nhỏ để mỗi người xem hiểu thêm
+              về một trong những danh tướng lỗi lạc nhất của dân tộc.
+            </p>
+          </div>
+
+          <div class="intro-image reveal-on-scroll">
+            <!-- THAY ẢNH TẠI ĐÂY: ảnh minh họa cho phần giới thiệu.
+                 Ảnh tượng đài Lý Thường Kiệt (Wikimedia Commons, CC BY-SA). -->
+            <figure class="intro-figure">
+              <img
+                id="intro-portrait"
+                src="images/ly-thuong-kiet.jpg"
+                alt="Tượng đài Lý Thường Kiệt cưỡi ngựa, tay nâng gương báu, trên bệ đá giữa hồ nước"
+                loading="lazy"
+              />
+              <figcaption class="intro-caption">
+                Tượng đài Lý Thường Kiệt — Wikimedia Commons
+              </figcaption>
+            </figure>
+            <div class="intro-stats">
+              <div class="stat-item">
+                <span class="stat-number" data-target="86">0</span>
+                <p>tuổi (1019 – 1105)</p>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-target="3">0</span>
+                <p>đời vua nhà Lý mà ông phò tá</p>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-target="1077">0</span>
+                <p>chiến thắng Như Nguyệt</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+       SECTION 3 — CÁC ANH HÙNG
+  ============================================================ -->
+      <section id="anh-hung" class="section heroes-section">
+        <div class="container">
+          <p class="section-label center">Nhân vật lịch sử</p>
+          <h2 class="section-title center">
+            Lý Thường Kiệt Và Những Người Cùng Thời
+          </h2>
+          <p class="section-desc center">
+            Nhấn "Xem tiểu sử" để đọc chi tiết về thân thế, bối cảnh lịch sử,
+            chiến công và ý nghĩa của từng nhân vật — bắt đầu từ Lý Thường Kiệt.
+          </p>
+
+          <div class="heroes-grid" id="heroes-grid">
+            <!-- Các thẻ nhân vật được JavaScript tạo ra tự động từ dữ liệu trong script.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal hiển thị tiểu sử chi tiết nhân vật -->
+      <div class="modal-overlay" id="hero-modal">
+        <div class="modal-box">
+          <button class="modal-close" id="modal-close" aria-label="Đóng">
+            &times;
+          </button>
+          <div class="modal-content" id="modal-content">
+            <!-- Nội dung chi tiết được script.js đổ vào đây -->
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+       SECTION 6 — TIMELINE
+  ============================================================ -->
+      <section id="timeline" class="section timeline-section">
+        <div class="container">
+          <p class="section-label center">Dòng chảy thời gian</p>
+          <h2 class="section-title center">
+            Cuộc Đời Lý Thường Kiệt Qua Các Mốc Thời Gian
+          </h2>
+          <p class="section-desc center">
+            Nhấn vào từng mốc để xem chi tiết bối cảnh và ý nghĩa lịch sử.
+          </p>
+        </div>
+
+        <div class="timeline-wrap" id="timeline-wrap">
+          <!-- Các mốc thời gian được tạo tự động bởi script.js -->
+        </div>
+      </section>
+
+      <!-- ============================================================
+       SECTION 7 — SỰ KIỆN / CHIẾN CÔNG
+  ============================================================ -->
+      <section id="su-kien" class="section events-section">
+        <div class="container">
+          <p class="section-label center">Tư liệu lịch sử</p>
+          <h2 class="section-title center">Những Trận Đánh Gắn Với Tên Ông</h2>
+          <p class="section-desc center">
+            Chiến lược "tiên phát chế nhân", phòng tuyến Như Nguyệt và những
+            trang sử được viết nên dưới tài thao lược của Lý Thường Kiệt.
+          </p>
+
+          <div class="events-list" id="events-list">
+            <!-- Danh sách sự kiện được tạo tự động bởi script.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+       SECTION 8 — THƯ VIỆN HÌNH ẢNH
+  ============================================================ -->
+      <section id="thu-vien" class="section gallery-section">
+        <div class="container">
+          <p class="section-label center">Thư viện</p>
+          <h2 class="section-title center">Thư Viện Hình Ảnh</h2>
+          <p class="section-desc center">
+            Tư liệu hình ảnh về Lý Thường Kiệt, phòng tuyến Như Nguyệt và thời
+            kỳ nhà Lý. Nhấn vào ảnh để xem ở chế độ toàn màn hình.
+          </p>
+        </div>
+
+        <div class="gallery-grid" id="gallery-grid">
+          <!-- Ảnh thư viện được tạo tự động bởi script.js, xem mảng galleryData -->
+        </div>
+      </section>
+
+      <!-- Lightbox xem ảnh phóng to -->
+      <div class="lightbox" id="lightbox">
+        <button
+          class="lightbox-close"
+          id="lightbox-close"
+          aria-label="Đóng ảnh"
+        >
+          &times;
+        </button>
+        <button
+          class="lightbox-nav lightbox-prev"
+          id="lightbox-prev"
+          aria-label="Ảnh trước"
+        >
+          &#10094;
+        </button>
+        <img src="" alt="" id="lightbox-img" />
+        <p class="lightbox-caption" id="lightbox-caption"></p>
+        <button
+          class="lightbox-nav lightbox-next"
+          id="lightbox-next"
+          aria-label="Ảnh sau"
+        >
+          &#10095;
+        </button>
+      </div>
+
+      <!-- ============================================================
+       SECTION 9 — VIDEO
+  ============================================================ -->
+      <section id="video" class="section video-section">
+        <div class="container">
+          <p class="section-label center">Tư liệu phim</p>
+          <h2 class="section-title center">
+            Lý Thường Kiệt Qua Những Thước Phim
+          </h2>
+          <p class="section-desc center">
+            Những thước phim tài liệu giúp hình dung rõ nét hơn về con người và
+            chiến công của Lý Thường Kiệt.
+          </p>
+
+          <div class="video-grid">
+            <!--
+              CÁCH GẮN VIDEO CỤ THỂ:
+              Thay <a class="video-frame" ...> bằng thẻ iframe dưới đây và điền
+              VIDEO_ID thật (phần sau "watch?v=" trên YouTube):
+
+              <div class="video-frame">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID"
+                        title="..." allowfullscreen></iframe>
+              </div>
+            -->
+            <article class="video-card">
+              <a
+                class="video-frame video-link"
+                href="https://www.youtube.com/results?search_query=L%C3%BD+Th%C6%B0%E1%BB%9Dng+Ki%E1%BB%87t+ch%E1%BB%91ng+T%E1%BB%91ng"
+                target="_blank"
+                rel="noopener"
+                data-art-title="Lý Thường Kiệt|chống Tống"
+                data-art-sub="1075 – 1077"
+                data-art-hue="gold"
+              >
+                <span class="video-play" aria-hidden="true">&#9658;</span>
+                <span class="video-link-label"
+                  >Mở danh sách video trên YouTube</span
+                >
+              </a>
+              <div class="video-info">
+                <h3>
+                  Lý Thường Kiệt và cuộc kháng chiến chống Tống 1075 – 1077
+                </h3>
+                <p>
+                  Tư liệu về chiến lược "tiên phát chế nhân" và trận quyết chiến
+                  trên phòng tuyến sông Như Nguyệt.
+                </p>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <a
+                class="video-frame video-link"
+                href="https://www.youtube.com/results?search_query=Nam+qu%E1%BB%91c+s%C6%A1n+h%C3%A0+b%C3%A0i+th%C6%A1+th%E1%BA%A7n"
+                target="_blank"
+                rel="noopener"
+                data-art-title="Nam Quốc|Sơn Hà"
+                data-art-sub="Bài thơ thần"
+                data-art-hue="red"
+              >
+                <span class="video-play" aria-hidden="true">&#9658;</span>
+                <span class="video-link-label"
+                  >Mở danh sách video trên YouTube</span
+                >
+              </a>
+              <div class="video-info">
+                <h3>Bài thơ thần "Nam quốc sơn hà"</h3>
+                <p>
+                  Bản tuyên ngôn chủ quyền đầu tiên của dân tộc, được cho là
+                  vang lên tại phòng tuyến Như Nguyệt để khích lệ tinh thần binh
+                  sĩ.
+                </p>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <a
+                class="video-frame video-link"
+                href="https://www.youtube.com/results?search_query=kinh+th%C3%A0nh+Th%C4%83ng+Long+th%E1%BB%9Di+nh%C3%A0+L%C3%BD"
+                target="_blank"
+                rel="noopener"
+                data-art-title="Thăng Long|thời Lý"
+                data-art-sub="Kinh thành"
+                data-art-hue="jade"
+              >
+                <span class="video-play" aria-hidden="true">&#9658;</span>
+                <span class="video-link-label"
+                  >Mở danh sách video trên YouTube</span
+                >
+              </a>
+              <div class="video-info">
+                <h3>Kinh thành Thăng Long thời nhà Lý</h3>
+                <p>
+                  Bối cảnh lịch sử nơi Lý Thường Kiệt sinh ra, trưởng thành và
+                  phò tá ba đời vua nhà Lý.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+       SECTION 10 — Ý NGHĨA / DI SẢN
+  ============================================================ -->
+      <section id="di-san" class="section legacy-section">
+        <div class="container">
+          <p class="section-label center">Ý nghĩa lịch sử</p>
+          <h2 class="section-title center">Lý Thường Kiệt Để Lại Điều Gì?</h2>
+
+          <div class="legacy-grid">
+            <div class="legacy-text reveal-on-scroll">
+              <p>
+                Di sản lớn nhất của Lý Thường Kiệt nằm ở tư duy quân sự chủ
+                động. Thay vì ngồi chờ địch đến, ông chủ trương "tiên phát chế
+                nhân" — đánh trước để phá thế chuẩn bị của đối phương. Năm 1075,
+                ông chỉ huy quân Đại Việt tiến đánh các châu Ung, Khâm, Liêm
+                trên đất Tống, rồi rút về nước đúng lúc, khiến nhà Tống mất thế
+                chủ động trong suốt thời gian đầu cuộc chiến.
+              </p>
+
+              <p>
+                Năm 1077, khi đại quân Tống do Quách Quỳ chỉ huy tiến sang, ông
+                tổ chức phòng tuyến trên sông Như Nguyệt (sông Cầu) — một chiến
+                lũy kết hợp giữa chướng ngại vật, lực lượng thủy bộ và tinh thần
+                chiến đấu được củng cố liên tục. Quân Tống nhiều lần tìm cách
+                vượt sông nhưng đều bị đẩy lui.
+              </p>
+
+              <p>
+                Gắn với phòng tuyến ấy là bài thơ thần "Nam quốc sơn hà" — bốn
+                câu thơ khẳng định nước Nam có vua riêng và ranh giới đã được
+                "sách trời" định sẵn: "Nam quốc sơn hà Nam đế cư, tiệt nhiên
+                định phận tại thiên thư". Bài thơ được xem là bản tuyên ngôn độc
+                lập đầu tiên bằng văn tự còn lưu truyền của dân tộc.
+              </p>
+
+              <p>
+                Điều đáng chú ý ở Lý Thường Kiệt còn là cách ông kết thúc chiến
+                tranh. Khi quân Tống đã suy yếu và có ý rút, ông chủ động đề
+                nghị giảng hòa — được ghi lại trong sử sách như một cách "không
+                làm tổn thương lòng tự trọng" đối phương, để tránh một cuộc đối
+                đầu kéo dài và giữ quan hệ hòa hiếu giữa hai nước.
+              </p>
+
+              <p>
+                Về sau, ông tiếp tục được tin dùng trong các trọng trách quân sự
+                và được giao trấn giữ vùng biên ải phía Bắc. Ông qua đời năm
+                1105, để lại một sự nghiệp gắn liền với thời kỳ thịnh trị của
+                nhà Lý và với ý thức chủ quyền lãnh thổ được khẳng định rõ ràng
+                nhất từ trước đến khi đó.
+              </p>
+
+              <p>
+                Tên ông ngày nay được đặt cho nhiều đường phố, trường học trên
+                khắp Việt Nam, và bài thơ Nam Quốc Sơn Hà vẫn được giảng dạy như
+                một trong những dấu mốc đầu tiên của tư tưởng độc lập dân tộc
+                trong lịch sử nước nhà.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+       SECTION 11 — TRÍCH DẪN LỊCH SỬ
+  ============================================================ -->
+      <section class="quote-section" id="quote-section">
+        <!-- THAY ẢNH TẠI ĐÂY: ảnh nền cho phần trích dẫn -->
+        <div class="quote-bg"></div>
+        <div class="quote-overlay"></div>
+
+        <div class="quote-content" id="quote-content">
+          <!-- Nội dung trích dẫn được luân phiên hiển thị bởi script.js, dữ liệu trong quotesData -->
+        </div>
+      </section>
+
+      <!-- ============================================================
+       BACK TO TOP
+  ============================================================ -->
+      <button id="back-to-top" aria-label="Lên đầu trang">&uarr;</button>
+    </main>
+
+    <!-- ============================================================
+     FOOTER
+============================================================ -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-about">
+          <h3 class="footer-logo">Lý Thường <span>Kiệt</span></h3>
+          <p>
+            Không gian tư liệu số giới thiệu về danh tướng Lý Thường Kiệt — thân
+            thế, sự nghiệp, các trận đánh và di sản ông để lại cho lịch sử Việt
+            Nam.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="#hero">Trang chủ</a></li>
+            <li><a href="#gioi-thieu">Giới thiệu</a></li>
+            <li><a href="#anh-hung">Nhân vật lịch sử</a></li>
+            <li><a href="#timeline">Cuộc đời Lý Thường Kiệt</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Nội dung</h4>
+          <ul>
+            <li><a href="#su-kien">Trận đánh lịch sử</a></li>
+            <li><a href="#thu-vien">Thư viện hình ảnh</a></li>
+            <li><a href="#video">Thước phim tài liệu</a></li>
+            <li><a href="#di-san">Di sản Lý Thường Kiệt</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="current-year"></span> Lý Thường Kiệt — Tư liệu lịch
+          sử. Trang web được xây dựng với mục đích giáo dục và lan tỏa tinh thần
+          lịch sử dân tộc.
+        </p>
+        <p class="footer-quote">
+          "Dân ta phải biết sử ta, cho tường gốc tích nước nhà Việt Nam."
+        </p>
+      </div>
+    </footer>
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script src="test2.js" defer></script>
+  </body>
+</html>

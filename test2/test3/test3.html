@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Quang Trung – Nguyễn Huệ: Hoàng Đế Áo Vải Và Chiến Thắng Ngọc Hồi – Đống
+      Đa
+    </title>
+
+    <!-- ================= GOOGLE FONTS ================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ================= CSS ================= -->
+    <link rel="stylesheet" href="test3.css" />
+  </head>
+  <body>
+    <!-- ============================================================
+     MÀN HÌNH LOADING (hiện khi trang vừa mở, JS sẽ ẩn đi)
+============================================================ -->
+    <div id="loading-screen">
+      <div class="loading-emblem">QT</div>
+      <div class="loading-bar"><span></span></div>
+      <p class="loading-text">Đang mở cánh cửa lịch sử...</p>
+    </div>
+
+    <!-- ============================================================
+     HEADER + NAVIGATION
+============================================================ -->
+    <header id="header">
+      <nav class="navbar">
+        <!-- Logo trường (gắn ở góc trên bên trái, có thể bấm) -->
+        <a
+          href="#hero"
+          class="logo-mark"
+          aria-label="Đại học Tôn Đức Thắng — về đầu trang"
+        >
+          <img
+            src="https://tdtu.edu.vn/sites/www/files/logo_2.png"
+            alt="Logo Đại học Tôn Đức Thắng (TDT)"
+            loading="eager"
+            decoding="async"
+          />
+        </a>
+
+        <a href="#hero" class="logo">Quang <span>Trung</span></a>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#gioi-thieu" class="nav-link">Giới thiệu</a></li>
+          <li><a href="#anh-hung" class="nav-link">Nhân vật</a></li>
+          <li><a href="#timeline" class="nav-link">Cuộc đời</a></li>
+          <li><a href="#hanh-quan" class="nav-link">Hành quân</a></li>
+          <li><a href="#su-kien" class="nav-link">Trận chiến</a></li>
+          <li><a href="#thu-vien" class="nav-link">Thư viện</a></li>
+          <li><a href="#video" class="nav-link">Thước phim</a></li>
+          <li><a href="#di-san" class="nav-link">Di sản</a></li>
+        </ul>
+
+        <!-- Nút hamburger cho mobile -->
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Mở menu"
+          aria-expanded="false"
+          aria-controls="nav-links"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ============================================================
+       SECTION 1 — HERO
+  ============================================================ -->
+      <section id="hero" class="hero">
+        <!-- Ảnh nền hero: JS gắn ảnh SVG tự tạo; muốn dùng ảnh thật, sửa trong quangtrung.js -->
+        <div class="hero-bg"></div>
+        <canvas id="particles-canvas" aria-hidden="true"></canvas>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+          <p class="hero-eyebrow">Hoàng đế Tây Sơn · 1753 – 1792</p>
+          <h1 class="hero-title reveal-text">QUANG TRUNG</h1>
+          <p class="hero-subtitle">
+            Người làm nên cuộc hành quân thần tốc và chiến thắng Ngọc Hồi – Đống
+            Đa, Tết Kỷ Dậu 1789
+          </p>
+          <div class="hero-buttons">
+            <a href="#timeline" class="btn btn-primary">Khám phá cuộc đời</a>
+            <a href="#hanh-quan" class="btn btn-outline">Theo bước hành quân</a>
+          </div>
+        </div>
+
+        <a href="#gioi-thieu" class="scroll-down" aria-label="Cuộn xuống">
+          <span></span>
+        </a>
+      </section>
+
+      <!-- ============================================================
+       SECTION 2 — GIỚI THIỆU
+  ============================================================ -->
+      <section id="gioi-thieu" class="section intro-section">
+        <div class="container intro-grid">
+          <div class="intro-text reveal-on-scroll">
+            <p class="section-label">Giới thiệu</p>
+            <h2 class="section-title">
+              Quang Trung – Nguyễn Huệ, Người Anh Hùng Áo Vải
+            </h2>
+
+            <p>
+              Nguyễn Huệ (1753 – 1792), sau này lên ngôi hoàng đế với niên hiệu
+              Quang Trung, là người em thứ hai trong ba anh em lãnh đạo phong
+              trào Tây Sơn. Ông sinh ra ở vùng Tây Sơn, thuộc đất Bình Định xưa
+              (nay thuộc tỉnh Gia Lai), và nổi tiếng với tài cầm quân quyết
+              đoán, linh hoạt cùng những cuộc hành quân thần tốc.
+            </p>
+
+            <p>
+              Năm 1771, anh em Nguyễn Nhạc, Nguyễn Huệ, Nguyễn Lữ dựng cờ khởi
+              nghĩa giữa lúc đất nước bị chia cắt và đời sống nhân dân khốn khó.
+              Nguyễn Huệ nhanh chóng trở thành vị tướng xuất sắc nhất của nghĩa
+              quân: ông góp công lớn đánh tan lực lượng chúa Nguyễn ở Đàng Trong
+              và tiến ra Bắc năm 1786 để chấm dứt thế lực chúa Trịnh.
+            </p>
+
+            <p>
+              Đầu năm 1785, ông chỉ huy trận Rạch Gầm – Xoài Mút trên sông Tiền,
+              đánh tan đạo quân Xiêm do Nguyễn Ánh mời sang. Chiến thắng ấy
+              khẳng định tài dùng thủy binh, dùng thế trận mai phục và nắm bắt
+              thời cơ của ông.
+            </p>
+
+            <p>
+              Cuối năm 1788, khi vua Lê Chiêu Thống cầu viện nhà Thanh, quân
+              Thanh do Tôn Sĩ Nghị chỉ huy kéo vào Thăng Long. Nguyễn Huệ lên
+              ngôi hoàng đế ở núi Bân (Phú Xuân), lấy niên hiệu Quang Trung, rồi
+              lập tức xuất quân ra Bắc. Chỉ trong những ngày đầu xuân Kỷ Dậu
+              1789, quân Tây Sơn đại phá quân Thanh, giải phóng Thăng Long.
+            </p>
+
+            <p>
+              Ngắn ngủi nhưng đầy sáng tạo, thời kỳ trị vì của Quang Trung còn
+              ghi dấu bằng những chính sách canh tân: khuyến khích khai khẩn
+              ruộng đất, đề cao việc học, dùng chữ Nôm trong văn bản của triều
+              đình và chủ trương xây dựng kinh đô mới ở Nghệ An. Ông mất đột
+              ngột năm 1792, khi những kế hoạch lớn vẫn còn dang dở.
+            </p>
+
+            <p>
+              Trang web này tập hợp thông tin, hình ảnh và video về thân thế, sự
+              nghiệp, cuộc hành quân, các trận đánh và di sản của Quang Trung —
+              như một phòng tư liệu nhỏ để mỗi người xem hiểu thêm về một trong
+              những vị hoàng đế kiệt xuất của lịch sử Việt Nam.
+            </p>
+          </div>
+
+          <div class="intro-image reveal-on-scroll">
+            <!-- THAY ẢNH TẠI ĐÂY: chép ảnh vào thư mục images/ với tên quang-trung.jpg
+                 (ví dụ ảnh tượng đài Quang Trung trên Wikimedia Commons, kiểm tra giấy phép).
+                 Nếu thiếu file, JS sẽ tự thay bằng ảnh SVG dự phòng. -->
+            <figure class="intro-figure">
+              <img
+                id="intro-portrait"
+                src="images/quang-trung.jpg"
+                alt="Tượng đài vua Quang Trung – Nguyễn Huệ"
+                loading="lazy"
+              />
+              <figcaption class="intro-caption">
+                Tượng đài vua Quang Trung – Nguyễn Huệ
+              </figcaption>
+            </figure>
+            <div class="intro-stats">
+              <div class="stat-item">
+                <span class="stat-number" data-target="39">0</span>
+                <p>tuổi thọ (1753 – 1792)</p>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-target="5">0</span>
+                <p>ngày đầu xuân đại phá quân Thanh</p>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-target="1789">0</span>
+                <p>chiến thắng Ngọc Hồi – Đống Đa</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+       SECTION 3 — NHÂN VẬT
+  ============================================================ -->
+      <section id="anh-hung" class="section heroes-section">
+        <div class="container">
+          <p class="section-label center">Nhân vật lịch sử</p>
+          <h2 class="section-title center">
+            Quang Trung Và Những Người Đồng Hành
+          </h2>
+          <p class="section-desc center">
+            Nhấn "Xem tiểu sử" để đọc chi tiết về thân thế, bối cảnh lịch sử,
+            chiến công và ý nghĩa của từng nhân vật — bắt đầu từ Quang Trung.
+          </p>
+
+          <div class="heroes-grid" id="heroes-grid">
+            <!-- Các thẻ nhân vật được JavaScript tạo tự động từ heroesData -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal hiển thị tiểu sử chi tiết nhân vật -->
+      <div
+        class="modal-overlay"
+        id="hero-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Tiểu sử nhân vật"
+      >
+        <div class="modal-box">
+          <button class="modal-close" id="modal-close" aria-label="Đóng">
+            &times;
+          </button>
+          <div class="modal-content" id="modal-content">
+            <!-- Nội dung chi tiết được JS đổ vào đây -->
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
+       SECTION 4 — TIMELINE
+  ============================================================ -->
+      <section id="timeline" class="section timeline-section">
+        <div class="container">
+          <p class="section-label center">Dòng chảy thời gian</p>
+          <h2 class="section-title center">
+            Cuộc Đời Quang Trung Qua Các Mốc Thời Gian
+          </h2>
+          <p class="section-desc center">
+            Nhấn vào từng mốc để xem chi tiết bối cảnh và ý nghĩa lịch sử.
+          </p>
+        </div>
+
+        <div class="timeline-wrap" id="timeline-wrap">
+          <!-- Các mốc thời gian được tạo tự động bởi JS -->
+        </div>
+      </section>
+
+      <!-- ============================================================
+       SECTION 5 — HÀNH QUÂN THẦN TỐC
+  ============================================================ -->
+      <section id="hanh-quan" class="section march-section">
+        <div class="container">
+          <p class="section-label center">Hành quân thần tốc</p>
+          <h2 class="section-title center">
+            Từ Phú Xuân Đến Thăng Long Trong Mùa Đông Mậu Thân
+          </h2>
+          <p class="section-desc center">
+            Vừa hành quân vừa tuyển thêm quân, đoàn quân Tây Sơn đi từ Phú Xuân
+            ra Bắc trong khoảng hơn một tháng để kịp đánh vào dịp Tết Kỷ Dậu.
+          </p>
+
+          <div class="march-track" id="march-track">
+            <!-- Các chặng hành quân được tạo tự động bởi JS (marchData) -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+       SECTION 6 — SỰ KIỆN / TRẬN ĐÁNH
+  ============================================================ -->
+      <section id="su-kien" class="section events-section">
+        <div class="container">
+          <p class="section-label center">Tư liệu lịch sử</p>
+          <h2 class="section-title center">Những Trận Đánh Gắn Với Tên Ông</h2>
+          <p class="section-desc center">
+            Từ Rạch Gầm – Xoài Mút trên sông Tiền đến Ngọc Hồi – Đống Đa dưới
+            chân thành Thăng Long: những trang sử được viết bằng tốc độ, bất ngờ
+            và tài dùng người.
+          </p>
+
+          <div class="events-list" id="events-list">
+            <!-- Danh sách sự kiện được tạo tự động bởi JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+       SECTION 7 — THƯ VIỆN HÌNH ẢNH
+  ============================================================ -->
+      <section id="thu-vien" class="section gallery-section">
+        <div class="container">
+          <p class="section-label center">Thư viện</p>
+          <h2 class="section-title center">Thư Viện Hình Ảnh</h2>
+          <p class="section-desc center">
+            Tư liệu hình ảnh về Quang Trung, các di tích Tây Sơn và chiến trường
+            Đống Đa. Nhấn vào ảnh để xem ở chế độ toàn màn hình.
+          </p>
+        </div>
+
+        <div class="gallery-grid" id="gallery-grid">
+          <!-- Ảnh thư viện được tạo tự động bởi JS, xem mảng galleryData -->
+        </div>
+      </section>
+
+      <!-- Lightbox xem ảnh phóng to -->
+      <div
+        class="lightbox"
+        id="lightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Xem ảnh phóng to"
+      >
+        <button
+          class="lightbox-close"
+          id="lightbox-close"
+          aria-label="Đóng ảnh"
+        >
+          &times;
+        </button>
+        <button
+          class="lightbox-nav lightbox-prev"
+          id="lightbox-prev"
+          aria-label="Ảnh trước"
+        >
+          &#10094;
+        </button>
+        <img src="" alt="" id="lightbox-img" />
+        <p class="lightbox-caption" id="lightbox-caption"></p>
+        <button
+          class="lightbox-nav lightbox-next"
+          id="lightbox-next"
+          aria-label="Ảnh sau"
+        >
+          &#10095;
+        </button>
+      </div>
+
+      <!-- ============================================================
+       SECTION 8 — VIDEO
+  ============================================================ -->
+      <section id="video" class="section video-section">
+        <div class="container">
+          <p class="section-label center">Tư liệu phim</p>
+          <h2 class="section-title center">Quang Trung Qua Những Thước Phim</h2>
+          <p class="section-desc center">
+            Những thước phim tài liệu giúp hình dung rõ nét hơn về con người và
+            chiến công của Quang Trung.
+          </p>
+
+          <div class="video-grid">
+            <!--
+              CÁCH GẮN VIDEO CỤ THỂ:
+              Thay thẻ <a class="video-frame video-link" ...> bằng iframe dưới đây
+              và điền VIDEO_ID thật (phần sau "watch?v=" trên YouTube):
+
+              <div class="video-frame">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID"
+                        title="..." allowfullscreen></iframe>
+              </div>
+            -->
+            <article class="video-card">
+              <a
+                class="video-frame video-link"
+                href="https://www.youtube.com/results?search_query=Quang+Trung+%C4%91%E1%BA%A1i+ph%C3%A1+qu%C3%A2n+Thanh"
+                target="_blank"
+                rel="noopener"
+                data-art-title="Ngọc Hồi|Đống Đa"
+                data-art-sub="Tết Kỷ Dậu 1789"
+                data-art-hue="red"
+              >
+                <span class="video-play" aria-hidden="true">&#9658;</span>
+                <span class="video-link-label"
+                  >Mở danh sách video trên YouTube</span
+                >
+              </a>
+              <div class="video-info">
+                <h3>Quang Trung đại phá quân Thanh năm 1789</h3>
+                <p>
+                  Tư liệu về cuộc hành quân thần tốc và các trận Hà Hồi, Ngọc
+                  Hồi, Đống Đa trong những ngày Tết Kỷ Dậu.
+                </p>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <a
+                class="video-frame video-link"
+                href="https://www.youtube.com/results?search_query=Tr%E1%BA%ADn+R%E1%BA%A1ch+G%E1%BA%A7m+Xo%C3%A0i+M%C3%BAt"
+                target="_blank"
+                rel="noopener"
+                data-art-title="Rạch Gầm|Xoài Mút"
+                data-art-sub="Sông Tiền, 1785"
+                data-art-hue="jade"
+              >
+                <span class="video-play" aria-hidden="true">&#9658;</span>
+                <span class="video-link-label"
+                  >Mở danh sách video trên YouTube</span
+                >
+              </a>
+              <div class="video-info">
+                <h3>Trận Rạch Gầm – Xoài Mút</h3>
+                <p>
+                  Chiến thắng thủy chiến trên sông Tiền năm 1785, nơi Nguyễn Huệ
+                  đánh tan quân Xiêm bằng thế trận mai phục.
+                </p>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <a
+                class="video-frame video-link"
+                href="https://www.youtube.com/results?search_query=Vua+Quang+Trung+Nguy%E1%BB%85n+Hu%E1%BB%87+phim+t%C3%A0i+li%E1%BB%87u"
+                target="_blank"
+                rel="noopener"
+                data-art-title="Vua Quang|Trung"
+                data-art-sub="Nguyễn Huệ"
+                data-art-hue="gold"
+              >
+                <span class="video-play" aria-hidden="true">&#9658;</span>
+                <span class="video-link-label"
+                  >Mở danh sách video trên YouTube</span
+                >
+              </a>
+              <div class="video-info">
+                <h3>Vua Quang Trung – Nguyễn Huệ</h3>
+                <p>
+                  Phim tài liệu về thân thế, sự nghiệp và những chính sách canh
+                  tân của vị hoàng đế áo vải.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+       SECTION 9 — Ý NGHĨA / DI SẢN
+  ============================================================ -->
+      <section id="di-san" class="section legacy-section">
+        <div class="container">
+          <p class="section-label center">Ý nghĩa lịch sử</p>
+          <h2 class="section-title center">Quang Trung Để Lại Điều Gì?</h2>
+
+          <div class="legacy-grid">
+            <div class="legacy-text reveal-on-scroll">
+              <p>
+                Di sản quân sự lớn nhất của Quang Trung là nghệ thuật dụng binh
+                thần tốc và bất ngờ. Chỉ trong khoảng hơn một tháng kể từ ngày
+                lên ngôi, ông đưa đoàn quân từ Phú Xuân ra tới Thăng Long, vừa
+                đi vừa tuyển quân và chỉnh đốn hàng ngũ, để đến Tết Kỷ Dậu 1789
+                đánh thẳng vào đạo quân Thanh vốn đang chủ quan, đóng quân rải
+                rác.
+              </p>
+
+              <p>
+                Trận Hà Hồi mở màn bằng việc bao vây và buộc quân Thanh ra hàng.
+                Tại Ngọc Hồi, quân Tây Sơn dùng ván ghép rơm ướt che chắn để áp
+                sát đồn địch, phối hợp voi trận và đánh giáp lá cà. Ở Đống Đa,
+                cánh quân của Đô đốc Đặng Tiến Đông tiêu diệt phần lớn đạo quân
+                Thanh còn lại, Sầm Nghi Đống phải tự vẫn. Theo sử sách, quân
+                Thanh gồm khoảng 29 vạn người, tan vỡ hoàn toàn chỉ trong vài
+                ngày.
+              </p>
+
+              <p>
+                Sau chiến thắng, Quang Trung khéo léo dùng ngoại giao để kết
+                thúc chiến tranh: ông cho người tiếp xúc với triều Thanh, giữ
+                hòa hiếu để có thời gian xây dựng đất nước. Năm 1789, vua Càn
+                Long phong ông làm An Nam quốc vương; sử sách còn ghi việc Tây
+                Sơn cử người sang Yên Kinh dự lễ mừng thọ vua Càn Long năm 1790.
+              </p>
+
+              <p>
+                Về đối nội, ông ban Chiếu khuyến nông để đưa dân phiêu tán về
+                quê khai khẩn ruộng đất, ban Chiếu lập học năm 1791, lập Sùng
+                chính viện do Nguyễn Thiếp đứng đầu để dịch sách chữ Hán sang
+                chữ Nôm, và đề cao chữ Nôm trong văn bản triều đình. Ông cũng dự
+                định dời đô về Nghệ An, với kinh đô mới gọi là Phượng Hoàng
+                Trung Đô.
+              </p>
+
+              <p>
+                Quang Trung mất ngày 29 tháng 7 năm Nhâm Tý (16/9/1792) ở tuổi
+                khoảng 39, khi nhiều kế hoạch canh tân vẫn còn dang dở. Triều
+                Tây Sơn suy yếu dần sau đó và sụp đổ năm 1802, nhưng hình ảnh vị
+                hoàng đế áo vải cùng chiến thắng Ngọc Hồi – Đống Đa vẫn là một
+                trong những biểu tượng sáng nhất của ý chí độc lập dân tộc.
+              </p>
+
+              <p>
+                Ngày nay, mùng 5 Tết được nhiều nơi tổ chức lễ hội gò Đống Đa để
+                tưởng nhớ chiến thắng năm 1789. Tên Quang Trung được đặt cho
+                nhiều đường phố, trường học, bảo tàng và khu di tích trên khắp
+                Việt Nam.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+       SECTION 10 — TRÍCH DẪN LỊCH SỬ
+  ============================================================ -->
+      <section class="quote-section" id="quote-section">
+        <div class="quote-bg"></div>
+        <div class="quote-overlay"></div>
+
+        <div class="quote-content" id="quote-content">
+          <!-- Nội dung trích dẫn được luân phiên hiển thị bởi JS, dữ liệu trong quotesData -->
+        </div>
+      </section>
+
+      <!-- ============================================================
+       BACK TO TOP
+  ============================================================ -->
+      <button id="back-to-top" aria-label="Lên đầu trang">&uarr;</button>
+    </main>
+
+    <!-- ============================================================
+     FOOTER
+============================================================ -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-about">
+          <h3 class="footer-logo">Quang <span>Trung</span></h3>
+          <p>
+            Không gian tư liệu số giới thiệu về vua Quang Trung – Nguyễn Huệ —
+            thân thế, sự nghiệp, cuộc hành quân, các trận đánh và di sản ông để
+            lại cho lịch sử Việt Nam.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="#hero">Trang chủ</a></li>
+            <li><a href="#gioi-thieu">Giới thiệu</a></li>
+            <li><a href="#anh-hung">Nhân vật lịch sử</a></li>
+            <li><a href="#timeline">Cuộc đời Quang Trung</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Nội dung</h4>
+          <ul>
+            <li><a href="#hanh-quan">Cuộc hành quân thần tốc</a></li>
+            <li><a href="#su-kien">Trận đánh lịch sử</a></li>
+            <li><a href="#thu-vien">Thư viện hình ảnh</a></li>
+            <li><a href="#video">Thước phim tài liệu</a></li>
+            <li><a href="#di-san">Di sản Quang Trung</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="current-year"></span> Quang Trung — Tư liệu lịch sử.
+          Trang web được xây dựng với mục đích giáo dục và lan tỏa tinh thần
+          lịch sử dân tộc.
+        </p>
+        <p class="footer-quote">
+          "Dân ta phải biết sử ta, cho tường gốc tích nước nhà Việt Nam."
+        </p>
+      </div>
+    </footer>
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script src="test3.js" defer></script>
+  </body>
+</html>
